@@ -98,7 +98,7 @@ const Signup = () => {
               onChange={onChange}
             />
           </div>
-          <button type="submit" className="btn btn-success">
+          <button type="submit" className="m-3 btn btn-success">
             Submit
           </button>
           <Link to="/login" className="m-3 btn btn-danger">
