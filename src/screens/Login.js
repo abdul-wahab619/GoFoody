@@ -26,6 +26,8 @@ const Login = () => {
       if (!json.success) {
         alert("Enter valid Credentials");
       } else {
+        localStorage.setItem("authToken", json.authTokrn);
+        console.log(localStorage.getItem("authToken"));
         navigate("/");
       }
     } else {
