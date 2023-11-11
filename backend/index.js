@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const mongoDB = require("./db");
+const cors = require("cors");
+
+app.use(cors());
 
 // Connect to MongoDB
 mongoDB()
@@ -11,6 +14,14 @@ mongoDB()
       res.send("Hello World");
     });
 
+    app.use((req, res, next) => {
+      res.setHeader("Allow-Control-Allow-Origin", "http://localhost:3000");
+      res.header(
+        "Allow-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
+      next();
+    });
     app.use(express.json());
     app.use("/api", require("./Routes/CreateUser"));
 
