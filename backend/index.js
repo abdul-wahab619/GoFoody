@@ -11,6 +11,9 @@ mongoDB()
       res.send("Hello World");
     });
 
+    app.use(express.json());
+    app.use("/api", require("./Routes/CreateUser"));
+
     // Start the Express server
     app.listen(port, () => {
       console.log(`Server is running at http://localhost:${port}`);
