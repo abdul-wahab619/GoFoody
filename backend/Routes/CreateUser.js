@@ -31,6 +31,7 @@ router.post(
       await User.create({
         name: req.body.name,
         password: secPassword,
+        // password: req.body.password,
         email: req.body.email,
         location: req.body.location,
       });
@@ -71,21 +72,25 @@ router.post(
         return res.status(400).json({ errors: "Invalid credentials" });
       }
 
-      // Generate JWT token
-      const tokenPayload = {
-        user: {
-          id: userData.id,
-        },
-      };
-      const authToken = jwt.sign(tokenPayload, jwtSecret);
+      // Generate JWT token (Uncomment if needed)
+      // const tokenPayload = {
+      //   user: {
+      //     id: userData.id,
+      //   },
+      // };
+      // const authToken = jwt.sign(tokenPayload, jwtSecret);
 
-      // Return success and token
-      res.json({ success: true, authToken });
+      // Return success and token (Uncomment if needed)
+      // res.json({ success: true, authToken });
+
+      // Return success without token for now
+      res.json({ success: true });
     } catch (error) {
       console.error(error);
       res.status(500).json({ errors: "Internal Server Error" });
     }
   }
 );
+
 
 module.exports = router;
