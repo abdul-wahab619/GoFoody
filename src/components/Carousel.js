@@ -27,6 +27,14 @@ const Carousel = () => {
           </div>
           <div className="carousel-item active">
             <img
+              src="https://source.unsplash.com/random/900x700/?burger"
+              className="d-block w-100"
+              style={{ filter: "brightness(30%)" }}
+              alt="abc"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
               src="https://source.unsplash.com/random/900x700/?pastry"
               className="d-block w-100"
               style={{ filter: "brightness(30%)" }}
@@ -35,15 +43,7 @@ const Carousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://source.unsplash.com/random/900x700/?paneer"
-              className="d-block w-100"
-              style={{ filter: "brightness(30%)" }}
-              alt="abc"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://source.unsplash.com/random/900x700/?chicken-tikka"
+              src="https://source.unsplash.com/random/900x700/?barbeque"
               className="d-block w-100"
               style={{ filter: "brightness(30%)" }}
               alt="abc"
