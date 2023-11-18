@@ -4,9 +4,11 @@ const Card = (props) => {
   let options = props.options;
   let priceOptions = Object.keys(options);
 
+  const handleAddToCart = () => {};
+
   return (
     <div>
-      <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px" }}>
+      <div className="card mt-3" style={{ width: "19rem", maxHeight: "420px" }}>
         <img
           src={props.imgSrc}
           className="card-img-top"
@@ -38,6 +40,13 @@ const Card = (props) => {
               })}
             </select>
             <div className="d-inline h-100 fs-5">Total Price</div>
+            <hr></hr>
+            <button
+              className={"btn btn-success justify-content-center ms-2"} // Added mt-2 for margin-top
+              onClick={handleAddToCart}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
