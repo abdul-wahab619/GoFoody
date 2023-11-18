@@ -125,16 +125,15 @@ const Home = () => {
                             .toLowerCase()
                             .includes(search.toLocaleLowerCase())
                       )
-                      .map((filterItem) => {
+                      .map((filterItems) => {
                         return (
                           <div
-                            key={filterItem._id}
+                            key={filterItems._id}
                             className="col-12 col-md-6 col-lg-3"
                           >
                             <Card
-                              foodName={filterItem.name}
-                              options={filterItem.options[0]}
-                              imgSrc={filterItem.img}
+                              foodItem={filterItems}
+                              options={filterItems.options[0]}
                             ></Card>
                           </div>
                         );
