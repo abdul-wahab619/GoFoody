@@ -24,6 +24,7 @@ mongoDB()
     });
     app.use(express.json());
     app.use("/api", require("./Routes/CreateUser"));
+    app.use("/api", require("./Routes/DisplayData"));
 
     // Start the Express server
     app.listen(port, () => {
